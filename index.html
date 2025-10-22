@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil Client — CAPITALINVEST</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand: #0b6f2b;
+      --brand-dark: #094f1b;
+      --accent: #f59e0b;
+      --accent-dark: #b45309;
+      --error: #dc2626;
+      --warning: #f97316;
+      --bg: #f8faf9;
+      --text-dark: #0b1b2b;
+      --text-muted: #6b7280;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: linear-gradient(180deg, #f7f9f8 0%, #edf3ee 100%);
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--brand);
+      color: var(--white);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo { font-size: 26px; font-weight: 800; }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: var(--white);
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--brand-dark);
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+
+    .info {
+      margin-bottom: 14px;
+      padding: 10px 14px;
+      border-left: 5px solid var(--brand);
+      background: #f9fafb;
+      border-radius: 6px;
+    }
+
+    .info strong {
+      color: var(--brand-dark);
+      display: inline-block;
+      width: 130px;
+    }
+
+    .solde {
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      color: var(--white);
+      border-radius: 10px;
+      padding: 18px;
+      margin-top: 20px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(11, 111, 43, 0.3);
+    }
+
+    .solde h2 {
+      font-size: 18px;
+      color: #eafbea;
+      margin-bottom: 8px;
+    }
+
+    .solde p {
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      color: var(--white);
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover { transform: scale(1.05); }
+
+    .btn-depot {
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      box-shadow: 0 6px 14px rgba(11, 111, 43, 0.25);
+    }
+
+    .btn-retrait {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      box-shadow: 0 6px 14px rgba(245, 158, 11, 0.25);
+    }
+
+    .btn-retrait:hover { box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4); }
+    .btn-depot:hover { box-shadow: 0 6px 16px rgba(11,111,43,0.4); }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 16px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .retour {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .retour:hover { color: var(--accent-dark); }
+
+    /* Notification stylée */
+    .notification {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 14px 20px;
+      border-radius: 10px;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideIn 0.4s ease-out forwards;
+      z-index: 1000;
+    }
+
+    @keyframes slideIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; transform: translateY(30px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">CAPITALINVEST</div>
+  </header>
+
+  <main class="container">
+    <h1>Profil Client</h1>
+
+    <div class="info"><strong>Nom :</strong> ESSOLABA KODJOVI</div>
+    <div class="info"><strong>Nationalité :</strong> Togolais</div>
+    <div class="info"><strong>Ville :</strong> KARA</div>
+    <div class="info"><strong>Profession :</strong> Maçon</div>
+
+    <div class="solde">
+      <h2>Solde du compte</h2>
+      <p>2 226 100 XAF</p>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-depot" onclick="showNotification('error')">💰 Dépôt</button>
+      <button class="btn btn-retrait" onclick="showNotification('error')">🏧 Retrait</button>
+    </div>
+
+    <a href="#" class="retour" onclick="showNotification('warning', event)">← Retour à l’accueil</a>
+  </main>
+
+  <footer class="footer">
+    © 2025 CAPITALINVEST — Espace Client
+  </footer>
+
+  <script>
+    function showNotification(type, event) {
+      if (event) event.preventDefault();
+
+      let message = "";
+      let color = "";
+
+      if (type === "error") {
+        message = "❌ Un problème est survenu lors de la récolte de vos gains, merci de contacter l’administrateur.";
+        color = "var(--error)";
+      } else if (type === "warning") {
+        message = "⚠️ Erreur, action limitée";
+        color = "var(--warning)";
+      }
+
+      const notif = document.createElement("div");
+      notif.className = "notification";
+      notif.style.background = color;
+      notif.textContent = message;
+      document.body.appendChild(notif);
+
+      // Disparition après 4 secondes
+      setTimeout(() => {
+        notif.style.animation = "fadeOut 0.5s forwards";
+        setTimeout(() => notif.remove(), 500);
+      }, 4000);
+    }
+  </script>
+
+</body>
+</html>
